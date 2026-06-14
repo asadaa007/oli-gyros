@@ -18,9 +18,7 @@ export const SITE = {
   directions:
     "https://www.google.com/maps/dir/?api=1&destination=%C3%93temet%C5%91+u.+35%2C+4028+Debrecen%2C+Hungary",
   social: {
-    facebook: "https://www.facebook.com/",
-    instagram: "https://www.instagram.com/",
-    tripadvisor: "https://www.tripadvisor.com/",
+    facebook: "https://www.facebook.com/pages/Oli-Gyros/155670307828283",
   },
 } as const;
 
@@ -49,6 +47,13 @@ export const HERO_THUMBS = [
 
 export const ABOUT_IMAGE =
   "https://images.unsplash.com/photo-1561758033-d89a9ad46330?auto=format&fit=crop&w=1400&q=80";
+
+// Darkened full-width "band" backgrounds behind certain sections
+export const STATS_BG =
+  "https://images.unsplash.com/photo-1544025162-d76694265947?auto=format&fit=crop&w=2000&q=80";
+
+export const REVIEWS_BG =
+  "https://images.unsplash.com/photo-1414235077428-338989a2e8c0?auto=format&fit=crop&w=2000&q=80";
 
 export const MENU_CATEGORY_IMAGES: Record<string, string> = {
   gyros:

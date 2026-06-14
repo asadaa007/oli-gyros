@@ -1,7 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { MapPin, Navigation, Phone } from "lucide-react";
+import { Facebook, MapPin, Navigation, Phone } from "lucide-react";
 import { useI18n } from "@/lib/i18n";
 import { SITE } from "@/lib/site";
 import SectionHeading from "@/components/ui/SectionHeading";
@@ -54,6 +54,25 @@ export default function Contact() {
                 </a>
               </div>
             </div>
+
+            <a
+              href={SITE.social.facebook}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="card-gold group flex items-center gap-4 rounded-2xl p-6"
+            >
+              <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-xl bg-[#1877F2] text-white">
+                <Facebook className="h-6 w-6" />
+              </div>
+              <div>
+                <p className="text-xs font-semibold uppercase tracking-wider text-gold">
+                  {t.footer.follow}
+                </p>
+                <p className="mt-1.5 text-base font-semibold text-cream transition-colors group-hover:text-gold">
+                  facebook.com/Oli-Gyros
+                </p>
+              </div>
+            </a>
 
             <div className="flex flex-col gap-3 sm:flex-row">
               <a

@@ -1,6 +1,6 @@
 "use client";
 
-import { Facebook, Instagram, MapPin, Phone } from "lucide-react";
+import { Facebook, MapPin, Phone } from "lucide-react";
 import { useI18n } from "@/lib/i18n";
 import { SITE } from "@/lib/site";
 import { cn } from "@/lib/utils";
@@ -99,14 +99,17 @@ export default function Footer() {
               <p className="text-xs font-semibold uppercase tracking-wider text-gold">
                 {t.footer.follow}
               </p>
-              <div className="mt-3 flex gap-2.5">
-                <SocialIcon href={SITE.social.facebook} label="Facebook">
+              <a
+                href={SITE.social.facebook}
+                target="_blank"
+                rel="noopener noreferrer"
+                className="mt-3 inline-flex items-center gap-2.5 rounded-full border border-gold/25 bg-charcoal/60 py-2 pl-2 pr-4 text-sm text-cream/85 transition-all hover:border-gold/60 hover:text-gold"
+              >
+                <span className="flex h-7 w-7 items-center justify-center rounded-full bg-[#1877F2] text-white">
                   <Facebook className="h-4 w-4" />
-                </SocialIcon>
-                <SocialIcon href={SITE.social.instagram} label="Instagram">
-                  <Instagram className="h-4 w-4" />
-                </SocialIcon>
-              </div>
+                </span>
+                Facebook
+              </a>
             </div>
           </div>
         </div>
@@ -139,27 +142,5 @@ export default function Footer() {
         </div>
       </div>
     </footer>
-  );
-}
-
-function SocialIcon({
-  href,
-  label,
-  children,
-}: {
-  href: string;
-  label: string;
-  children: React.ReactNode;
-}) {
-  return (
-    <a
-      href={href}
-      target="_blank"
-      rel="noopener noreferrer"
-      aria-label={label}
-      className="flex h-9 w-9 items-center justify-center rounded-full border border-gold/25 text-cream/80 transition-all hover:border-gold hover:bg-gold hover:text-ink"
-    >
-      {children}
-    </a>
   );
 }

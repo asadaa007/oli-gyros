@@ -2,9 +2,10 @@
 
 import { useCallback, useEffect, useState } from "react";
 import { AnimatePresence, motion } from "framer-motion";
+import Image from "next/image";
 import { ChevronLeft, ChevronRight, Quote, Star } from "lucide-react";
 import { useI18n } from "@/lib/i18n";
-import { SITE } from "@/lib/site";
+import { REVIEWS_BG, SITE } from "@/lib/site";
 import SectionHeading from "@/components/ui/SectionHeading";
 import { cn } from "@/lib/utils";
 
@@ -35,9 +36,17 @@ export default function Reviews() {
   return (
     <section
       id="reviews"
-      className="section-glow relative overflow-hidden bg-charcoal py-24 sm:py-32"
+      className="relative isolate overflow-hidden py-24 sm:py-32"
     >
-      <div className="mx-auto max-w-5xl px-5 sm:px-8">
+      {/* Restaurant ambiance background */}
+      <div className="absolute inset-0 z-0">
+        <Image src={REVIEWS_BG} alt="" fill sizes="100vw" className="object-cover" />
+      </div>
+      <div className="absolute inset-0 z-[1] bg-charcoal/88" />
+      <div className="absolute inset-0 z-[1] bg-gradient-to-b from-charcoal via-charcoal/70 to-charcoal" />
+      <div className="absolute inset-0 z-[1] section-glow" />
+
+      <div className="relative z-10 mx-auto max-w-5xl px-5 sm:px-8">
         <SectionHeading
           eyebrow={t.reviews.eyebrow}
           title={t.reviews.title}

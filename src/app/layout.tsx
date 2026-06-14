@@ -143,6 +143,7 @@ const restaurantSchema = {
   ],
   paymentAccepted: "Cash, Credit Card, NFC",
   hasMap: SITE.directions,
+  sameAs: [SITE.social.facebook],
 };
 
 export default function RootLayout({
